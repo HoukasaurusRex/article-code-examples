@@ -24,7 +24,7 @@
 
 ## Articles
 
-* Making a Bastion Host: [Code](https://github.com/HoukasaurusRex/article-code-examples/src/making-a-bastion-host) - [Article](https://jt.houk.space/articles/making-a-bastion-host)
+* Making a Bastion Host: [Code](https://github.com/HoukasaurusRex/article-code-examples/tree/master/src/making-a-bastion-host) - [Article](https://jt.houk.space/articles/making-a-bastion-host)
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg\?style\=flat-square\&logo\=linkedin\&colorB\=555
 [linkedin-url]: https://www.linkedin.com/in/jt-houk/
