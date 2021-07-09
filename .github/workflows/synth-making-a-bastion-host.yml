@@ -1,0 +1,29 @@
+name: Making a Bastion Host CDK Synth
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  synth:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Setup node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: cdk synth
+        # uses: youyo/aws-cdk-github-actions@v2
+        # temporarily use fork until issue with file permissions resuolved
+        # https://github.com/youyo/aws-cdk-github-actions/issues/36
+        uses: UpperCampus/aws-cdk-github-actions@master
+        with:
+          cdk_subcommand: 'synth'
+          # cdk_args: '--require-approval never'
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+          AWS_ACCOUNT_NUMBER: ${{ secrets.AWS_ACCOUNT_NUMBER }}

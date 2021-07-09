@@ -1,0 +1,1139 @@
+{
+  "version": "12.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "bastion-host-project-development-stack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://313137072350/us-east-1",
+      "properties": {
+        "templateFile": "bastion-host-project-development-stack.template.json",
+        "tags": {
+          "Deployedby": "jt.houk",
+          "Project": "bastion-host-project-development"
+        },
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/bastion-host-project-development-stack": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "Deployedby",
+                "Value": "jt.houk"
+              },
+              {
+                "Key": "Project",
+                "Value": "bastion-host-project-development"
+              }
+            ],
+            "trace": [
+              "ConstructNode.addMetadata (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/core/lib/construct-compat.ts:252:92)",
+              "Object.addStackArtifactToAssembly (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/core/lib/stack-synthesizers/_shared.ts:25:16)",
+              "LegacyStackSynthesizer.emitStackArtifact (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/core/lib/stack-synthesizers/stack-synthesizer.ts:29:5)",
+              "LegacyStackSynthesizer.synthesize (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:99:10)",
+              "/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/core/lib/private/synthesis.ts:184:29",
+              "visit (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "synthesizeTree (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/core/lib/private/synthesis.ts:176:3)",
+              "Object.synthesize (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/core/lib/private/synthesis.ts:39:3)",
+              "App.synth (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (events.js:482:26)",
+              "process.emit (events.js:375:28)",
+              "process.emit (domain.js:470:12)",
+              "process.emit (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentvpc289FDA40",
+            "trace": [
+              "new Vpc (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:710:21)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:17:17)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet1Subnet13BA03C0",
+            "trace": [
+              "new Subnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:997:20)",
+              "new PublicSubnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1153:5)",
+              "/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:882:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:864:28)",
+              "Vpc.createSubnets (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:853:12)",
+              "new Vpc (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:739:10)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:17:17)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet1RouteTable95763DF2",
+            "trace": [
+              "new Subnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1015:19)",
+              "new PublicSubnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1153:5)",
+              "/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:882:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:864:28)",
+              "Vpc.createSubnets (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:853:12)",
+              "new Vpc (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:739:10)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:17:17)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet1RouteTableAssociationB3D1970C",
+            "trace": [
+              "new Subnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1021:5)",
+              "new PublicSubnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1153:5)",
+              "/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:882:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:864:28)",
+              "Vpc.createSubnets (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:853:12)",
+              "new Vpc (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:739:10)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:17:17)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet1DefaultRouteC5E28D61",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1031:19)",
+              "/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:758:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:757:46)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:17:17)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet2SubnetF2DD2676",
+            "trace": [
+              "new Subnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:997:20)",
+              "new PublicSubnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1153:5)",
+              "/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:882:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:864:28)",
+              "Vpc.createSubnets (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:853:12)",
+              "new Vpc (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:739:10)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:17:17)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet2RouteTable7E5969B9",
+            "trace": [
+              "new Subnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1015:19)",
+              "new PublicSubnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1153:5)",
+              "/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:882:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:864:28)",
+              "Vpc.createSubnets (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:853:12)",
+              "new Vpc (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:739:10)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:17:17)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet2RouteTableAssociation5ED21E1F",
+            "trace": [
+              "new Subnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1021:5)",
+              "new PublicSubnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1153:5)",
+              "/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:882:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:864:28)",
+              "Vpc.createSubnets (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:853:12)",
+              "new Vpc (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:739:10)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:17:17)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet2DefaultRouteC1CE2656",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1031:19)",
+              "/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:758:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:757:46)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:17:17)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-isolated-Subnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet1SubnetE16F1C77",
+            "trace": [
+              "new Subnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:997:20)",
+              "new PrivateSubnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1185:5)",
+              "/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:892:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:864:28)",
+              "Vpc.createSubnets (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:853:12)",
+              "new Vpc (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:739:10)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:17:17)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-isolated-Subnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet1RouteTable87126855",
+            "trace": [
+              "new Subnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1015:19)",
+              "new PrivateSubnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1185:5)",
+              "/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:892:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:864:28)",
+              "Vpc.createSubnets (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:853:12)",
+              "new Vpc (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:739:10)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:17:17)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-isolated-Subnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet1RouteTableAssociation5275729F",
+            "trace": [
+              "new Subnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1021:5)",
+              "new PrivateSubnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1185:5)",
+              "/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:892:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:864:28)",
+              "Vpc.createSubnets (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:853:12)",
+              "new Vpc (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:739:10)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:17:17)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-isolated-Subnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet2Subnet562D9E45",
+            "trace": [
+              "new Subnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:997:20)",
+              "new PrivateSubnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1185:5)",
+              "/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:892:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:864:28)",
+              "Vpc.createSubnets (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:853:12)",
+              "new Vpc (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:739:10)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:17:17)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-isolated-Subnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet2RouteTableF36AE6D6",
+            "trace": [
+              "new Subnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1015:19)",
+              "new PrivateSubnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1185:5)",
+              "/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:892:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:864:28)",
+              "Vpc.createSubnets (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:853:12)",
+              "new Vpc (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:739:10)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:17:17)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-isolated-Subnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet2RouteTableAssociationEC6FF6DC",
+            "trace": [
+              "new Subnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1021:5)",
+              "new PrivateSubnet (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1185:5)",
+              "/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:892:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:864:28)",
+              "Vpc.createSubnets (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:853:12)",
+              "new Vpc (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:739:10)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:17:17)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-vpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentvpcIGW21F49527",
+            "trace": [
+              "new Vpc (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:746:19)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:17:17)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-vpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentvpcVPCGW0F7EDD85",
+            "trace": [
+              "new Vpc (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:752:19)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:17:17)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-vpc-endpoints-outbound-sg/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentvpcendpointsoutboundsgE03F136B",
+            "trace": [
+              "new SecurityGroup (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:289:26)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:38:38)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/BastionHostProjectDevelopmentVPCEndpointsOutboundSGID": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BastionHostProjectDevelopmentVPCEndpointsOutboundSGID",
+            "trace": [
+              "CfnLogger.log (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/utils.ts:20:7)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:130:12)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/BastionHostProjectDevelopmentVPCIsolatedSubnets": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BastionHostProjectDevelopmentVPCIsolatedSubnets",
+            "trace": [
+              "CfnLogger.log (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/utils.ts:20:7)",
+              "new CustomVPC (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/vpc.ts:131:12)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:12:52)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-rds/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentrds1C46427B",
+            "trace": [
+              "new SecurityGroup (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:289:26)",
+              "new PostgresRdsInstance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/rds.ts:31:27)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:17:28)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/BastionHostProjectDevelopmentPgdbCredentialsSecret/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BastionHostProjectDevelopmentPgdbCredentialsSecret4A356017",
+            "trace": [
+              "new Secret (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-secretsmanager/lib/secret.ts:337:22)",
+              "new PostgresRdsInstance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/rds.ts:42:39)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:17:28)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/BastionHostProjectDevelopmentPgdbCredentialsSecret/Attachment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BastionHostProjectDevelopmentPgdbCredentialsSecretAttachment4C54DF12",
+            "trace": [
+              "new SecretTargetAttachment (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-secretsmanager/lib/secret.ts:485:24)",
+              "Secret.attach (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-secretsmanager/lib/secret.ts:220:12)",
+              "new DatabaseInstance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-rds/lib/instance.ts:643:28)",
+              "new PostgresRdsInstance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/rds.ts:58:22)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:17:28)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/BastionHostProjectDevelopmentDBCredentialsArn/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BastionHostProjectDevelopmentDBCredentialsArnDF5C9545",
+            "trace": [
+              "new StringParameter (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ssm/lib/parameter.ts:268:22)",
+              "new PostgresRdsInstance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/rds.ts:53:36)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:17:28)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/BastionHostProjectDevelopmentDatabase/SubnetGroup/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BastionHostProjectDevelopmentDatabaseSubnetGroup5048BE15",
+            "trace": [
+              "new SubnetGroup (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-rds/lib/subnet-group.ts:48:25)",
+              "new DatabaseInstanceNew (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-rds/lib/instance.ts:354:46)",
+              "new DatabaseInstanceSource (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-rds/lib/instance.ts:505:5)",
+              "new DatabaseInstance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-rds/lib/instance.ts:618:5)",
+              "new PostgresRdsInstance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/rds.ts:58:22)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:17:28)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/BastionHostProjectDevelopmentDatabase/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BastionHostProjectDevelopmentDatabase478EC4E9",
+            "trace": [
+              "new DatabaseInstance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-rds/lib/instance.ts:623:22)",
+              "new PostgresRdsInstance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/rds.ts:58:22)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:17:28)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/BastionHostProjectDevelopmentDatabaseEndpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BastionHostProjectDevelopmentDatabaseEndpoint",
+            "trace": [
+              "CfnLogger.log (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/utils.ts:20:7)",
+              "new PostgresRdsInstance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/rds.ts:81:12)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:17:28)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/BastionHostProjectDevelopmentDatabaseCredentialsARN": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BastionHostProjectDevelopmentDatabaseCredentialsARN",
+            "trace": [
+              "CfnLogger.log (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/utils.ts:20:7)",
+              "new PostgresRdsInstance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/rds.ts:82:12)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:17:28)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-pg-bastion-sg/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentpgbastionsg4D8F1B76",
+            "trace": [
+              "new SecurityGroup (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:289:26)",
+              "new BastionInstance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/ec2.ts:22:27)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:26:5)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-pg-bastion-sg/to bastionhostprojectdevelopmentstackbastionhostprojectdevelopmentvpcendpointsoutboundsg4AA2A7D6:5432": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentpgbastionsgtobastionhostprojectdevelopmentstackbastionhostprojectdevelopmentvpcendpointsoutboundsg4AA2A7D65432106035E7",
+            "trace": [
+              "SecurityGroup.addEgressRule (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:83:7)",
+              "SecurityGroup.addEgressRule (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:338:13)",
+              "new BastionInstance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/ec2.ts:29:19)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:26:5)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-pg-bastion/InstanceSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentpgbastionInstanceSecurityGroupF92EE151",
+            "trace": [
+              "new SecurityGroup (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:289:26)",
+              "new Instance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/instance.ts:146:28)",
+              "new BastionInstance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/ec2.ts:31:29)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:26:5)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-pg-bastion/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentpgbastionInstanceRole38571E36",
+            "trace": [
+              "new Role (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-iam/lib/role.ts:199:18)",
+              "new Instance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/instance.ts:155:31)",
+              "new BastionInstance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/ec2.ts:31:29)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:26:5)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-pg-bastion/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentpgbastionInstanceProfile810C8AD6",
+            "trace": [
+              "new Instance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/instance.ts:160:24)",
+              "new BastionInstance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/ec2.ts:31:29)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:26:5)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/bastion-host-project-development-pg-bastion/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bastionhostprojectdevelopmentpgbastion12200387",
+            "trace": [
+              "new Instance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/instance.ts:195:21)",
+              "new BastionInstance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/ec2.ts:31:29)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:26:5)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceamiamazonlinuxlatestamznamihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
+            "trace": [
+              "Function.fromStringParameterAttributes (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ssm/lib/parameter.ts:182:9)",
+              "Function.valueForTypedStringParameter (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ssm/lib/parameter.ts:233:17)",
+              "AmazonLinuxImage.getImage (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/machine-image.ts:71:37)",
+              "new Instance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/aws-ec2/lib/instance.ts:165:44)",
+              "new BastionInstance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/ec2.ts:31:29)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:26:5)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/BastionHostProjectDevelopmentBastionInstanceConnectionInfo: ": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BastionHostProjectDevelopmentBastionInstanceConnectionInfo",
+            "trace": [
+              "CfnLogger.log (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/utils.ts:20:7)",
+              "new BastionInstance (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/constructs/ec2.ts:46:12)",
+              "new BastionProjectStack (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/lib/stack.ts:26:5)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/bin/index.ts:8:15)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/bastion-host-project-development-stack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (events.js:482:26)",
+              "process.emit (events.js:375:28)",
+              "process.emit (domain.js:470:12)",
+              "process.emit (/Users/terminallychill/Sites/Learning/article-code-examples/src/making-a-bastion-host/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "bastion-host-project-development-stack"
+    }
+  }
+}

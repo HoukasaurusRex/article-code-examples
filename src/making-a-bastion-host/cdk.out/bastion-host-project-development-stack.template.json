@@ -1,0 +1,749 @@
+{
+  "Description": "Deploys cloud resources for Bastion project",
+  "Resources": {
+    "bastionhostprojectdevelopmentvpc289FDA40": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "172.22.0.0/16",
+        "EnableDnsHostnames": true,
+        "EnableDnsSupport": true,
+        "InstanceTenancy": "default",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "bastion-host-project-development-stack/bastion-host-project-development-vpc"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-vpc/Resource"
+      }
+    },
+    "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet1Subnet13BA03C0": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "172.22.0.0/22",
+        "VpcId": {
+          "Ref": "bastionhostprojectdevelopmentvpc289FDA40"
+        },
+        "AvailabilityZone": "us-east-1a",
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "bastion-host-project-development-public-"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          },
+          {
+            "Key": "Name",
+            "Value": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet1/Subnet"
+      }
+    },
+    "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet1RouteTable95763DF2": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "bastionhostprojectdevelopmentvpc289FDA40"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet1/RouteTable"
+      }
+    },
+    "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet1RouteTableAssociationB3D1970C": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet1RouteTable95763DF2"
+        },
+        "SubnetId": {
+          "Ref": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet1Subnet13BA03C0"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet1/RouteTableAssociation"
+      }
+    },
+    "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet1DefaultRouteC5E28D61": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet1RouteTable95763DF2"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "bastionhostprojectdevelopmentvpcIGW21F49527"
+        }
+      },
+      "DependsOn": [
+        "bastionhostprojectdevelopmentvpcVPCGW0F7EDD85"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet1/DefaultRoute"
+      }
+    },
+    "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet2SubnetF2DD2676": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "172.22.4.0/22",
+        "VpcId": {
+          "Ref": "bastionhostprojectdevelopmentvpc289FDA40"
+        },
+        "AvailabilityZone": "us-east-1b",
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "bastion-host-project-development-public-"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          },
+          {
+            "Key": "Name",
+            "Value": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet2/Subnet"
+      }
+    },
+    "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet2RouteTable7E5969B9": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "bastionhostprojectdevelopmentvpc289FDA40"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet2/RouteTable"
+      }
+    },
+    "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet2RouteTableAssociation5ED21E1F": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet2RouteTable7E5969B9"
+        },
+        "SubnetId": {
+          "Ref": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet2SubnetF2DD2676"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet2/RouteTableAssociation"
+      }
+    },
+    "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet2DefaultRouteC1CE2656": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet2RouteTable7E5969B9"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "bastionhostprojectdevelopmentvpcIGW21F49527"
+        }
+      },
+      "DependsOn": [
+        "bastionhostprojectdevelopmentvpcVPCGW0F7EDD85"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-public-Subnet2/DefaultRoute"
+      }
+    },
+    "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet1SubnetE16F1C77": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "172.22.8.0/22",
+        "VpcId": {
+          "Ref": "bastionhostprojectdevelopmentvpc289FDA40"
+        },
+        "AvailabilityZone": "us-east-1a",
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "bastion-host-project-development-isolated-"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Isolated"
+          },
+          {
+            "Key": "Name",
+            "Value": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-isolated-Subnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-isolated-Subnet1/Subnet"
+      }
+    },
+    "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet1RouteTable87126855": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "bastionhostprojectdevelopmentvpc289FDA40"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-isolated-Subnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-isolated-Subnet1/RouteTable"
+      }
+    },
+    "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet1RouteTableAssociation5275729F": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet1RouteTable87126855"
+        },
+        "SubnetId": {
+          "Ref": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet1SubnetE16F1C77"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-isolated-Subnet1/RouteTableAssociation"
+      }
+    },
+    "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet2Subnet562D9E45": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "172.22.12.0/22",
+        "VpcId": {
+          "Ref": "bastionhostprojectdevelopmentvpc289FDA40"
+        },
+        "AvailabilityZone": "us-east-1b",
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "bastion-host-project-development-isolated-"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Isolated"
+          },
+          {
+            "Key": "Name",
+            "Value": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-isolated-Subnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-isolated-Subnet2/Subnet"
+      }
+    },
+    "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet2RouteTableF36AE6D6": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "bastionhostprojectdevelopmentvpc289FDA40"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-isolated-Subnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-isolated-Subnet2/RouteTable"
+      }
+    },
+    "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet2RouteTableAssociationEC6FF6DC": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet2RouteTableF36AE6D6"
+        },
+        "SubnetId": {
+          "Ref": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet2Subnet562D9E45"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-vpc/bastion-host-project-development-isolated-Subnet2/RouteTableAssociation"
+      }
+    },
+    "bastionhostprojectdevelopmentvpcIGW21F49527": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "bastion-host-project-development-stack/bastion-host-project-development-vpc"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-vpc/IGW"
+      }
+    },
+    "bastionhostprojectdevelopmentvpcVPCGW0F7EDD85": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "VpcId": {
+          "Ref": "bastionhostprojectdevelopmentvpc289FDA40"
+        },
+        "InternetGatewayId": {
+          "Ref": "bastionhostprojectdevelopmentvpcIGW21F49527"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-vpc/VPCGW"
+      }
+    },
+    "bastionhostprojectdevelopmentvpcendpointsoutboundsgE03F136B": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Allows resources inside isolated VPC access to defined vpc gateway and interface endpoints",
+        "GroupName": "bastion-host-project-development-vpc-endpoints-outbound-sg",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "VpcId": {
+          "Ref": "bastionhostprojectdevelopmentvpc289FDA40"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-vpc-endpoints-outbound-sg/Resource"
+      }
+    },
+    "bastionhostprojectdevelopmentrds1C46427B": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "bastion-host-project-development-stack/bastion-host-project-development-rds",
+        "GroupName": "bastion-host-project-development-rds-sg",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": {
+              "Fn::GetAtt": [
+                "bastionhostprojectdevelopmentvpc289FDA40",
+                "CidrBlock"
+              ]
+            },
+            "Description": "Allows only local resources inside VPC to access this port 5432 (Postgres)",
+            "FromPort": 5432,
+            "IpProtocol": "tcp",
+            "ToPort": 5432
+          }
+        ],
+        "VpcId": {
+          "Ref": "bastionhostprojectdevelopmentvpc289FDA40"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-rds/Resource"
+      }
+    },
+    "BastionHostProjectDevelopmentPgdbCredentialsSecret4A356017": {
+      "Type": "AWS::SecretsManager::Secret",
+      "Properties": {
+        "Description": "Credentials to access Postgres Database on RDS",
+        "GenerateSecretString": {
+          "ExcludePunctuation": true,
+          "GenerateStringKey": "password",
+          "IncludeSpace": false,
+          "SecretStringTemplate": "{\"username\":\"jt_houk\"}"
+        },
+        "Name": "bastion-host-project-development/rds/postgres/credentials"
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/BastionHostProjectDevelopmentPgdbCredentialsSecret/Resource"
+      }
+    },
+    "BastionHostProjectDevelopmentPgdbCredentialsSecretAttachment4C54DF12": {
+      "Type": "AWS::SecretsManager::SecretTargetAttachment",
+      "Properties": {
+        "SecretId": {
+          "Ref": "BastionHostProjectDevelopmentPgdbCredentialsSecret4A356017"
+        },
+        "TargetId": {
+          "Ref": "BastionHostProjectDevelopmentDatabase478EC4E9"
+        },
+        "TargetType": "AWS::RDS::DBInstance"
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/BastionHostProjectDevelopmentPgdbCredentialsSecret/Attachment/Resource"
+      }
+    },
+    "BastionHostProjectDevelopmentDBCredentialsArnDF5C9545": {
+      "Type": "AWS::SSM::Parameter",
+      "Properties": {
+        "Type": "String",
+        "Value": {
+          "Ref": "BastionHostProjectDevelopmentPgdbCredentialsSecret4A356017"
+        },
+        "Name": "bastion-host-project-development-rds-credentials-arn"
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/BastionHostProjectDevelopmentDBCredentialsArn/Resource"
+      }
+    },
+    "BastionHostProjectDevelopmentDatabaseSubnetGroup5048BE15": {
+      "Type": "AWS::RDS::DBSubnetGroup",
+      "Properties": {
+        "DBSubnetGroupDescription": "Subnet group for BastionHostProjectDevelopmentDatabase database",
+        "SubnetIds": [
+          {
+            "Ref": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet1SubnetE16F1C77"
+          },
+          {
+            "Ref": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet2Subnet562D9E45"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/BastionHostProjectDevelopmentDatabase/SubnetGroup/Default"
+      }
+    },
+    "BastionHostProjectDevelopmentDatabase478EC4E9": {
+      "Type": "AWS::RDS::DBInstance",
+      "Properties": {
+        "DBInstanceClass": "db.t3.micro",
+        "AllocatedStorage": "10",
+        "AllowMajorVersionUpgrade": true,
+        "AutoMinorVersionUpgrade": true,
+        "BackupRetentionPeriod": 7,
+        "CopyTagsToSnapshot": true,
+        "DBName": "development",
+        "DBSubnetGroupName": {
+          "Ref": "BastionHostProjectDevelopmentDatabaseSubnetGroup5048BE15"
+        },
+        "DeletionProtection": false,
+        "Engine": "postgres",
+        "EngineVersion": "13",
+        "MasterUsername": {
+          "Fn::Join": [
+            "",
+            [
+              "{{resolve:secretsmanager:",
+              {
+                "Ref": "BastionHostProjectDevelopmentPgdbCredentialsSecret4A356017"
+              },
+              ":SecretString:username::}}"
+            ]
+          ]
+        },
+        "MasterUserPassword": {
+          "Fn::Join": [
+            "",
+            [
+              "{{resolve:secretsmanager:",
+              {
+                "Ref": "BastionHostProjectDevelopmentPgdbCredentialsSecret4A356017"
+              },
+              ":SecretString:password::}}"
+            ]
+          ]
+        },
+        "Port": "5432",
+        "PubliclyAccessible": false,
+        "StorageType": "gp2",
+        "VPCSecurityGroups": [
+          {
+            "Fn::GetAtt": [
+              "bastionhostprojectdevelopmentrds1C46427B",
+              "GroupId"
+            ]
+          }
+        ]
+      },
+      "UpdateReplacePolicy": "Snapshot",
+      "DeletionPolicy": "Snapshot",
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/BastionHostProjectDevelopmentDatabase/Resource"
+      }
+    },
+    "bastionhostprojectdevelopmentpgbastionsg4D8F1B76": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "bastion-host-project-development-stack/bastion-host-project-development-pg-bastion-sg",
+        "GroupName": "bastion-host-project-development-pg-bastion-sg",
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "allow ssh access from the world",
+            "FromPort": 22,
+            "IpProtocol": "tcp",
+            "ToPort": 22
+          }
+        ],
+        "VpcId": {
+          "Ref": "bastionhostprojectdevelopmentvpc289FDA40"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-pg-bastion-sg/Resource"
+      }
+    },
+    "bastionhostprojectdevelopmentpgbastionsgtobastionhostprojectdevelopmentstackbastionhostprojectdevelopmentvpcendpointsoutboundsg4AA2A7D65432106035E7": {
+      "Type": "AWS::EC2::SecurityGroupEgress",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "bastionhostprojectdevelopmentpgbastionsg4D8F1B76",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "Description": "allow outbound connection to protected resource",
+        "DestinationSecurityGroupId": {
+          "Fn::GetAtt": [
+            "bastionhostprojectdevelopmentvpcendpointsoutboundsgE03F136B",
+            "GroupId"
+          ]
+        },
+        "FromPort": 5432,
+        "ToPort": 5432
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-pg-bastion-sg/to bastionhostprojectdevelopmentstackbastionhostprojectdevelopmentvpcendpointsoutboundsg4AA2A7D6:5432"
+      }
+    },
+    "bastionhostprojectdevelopmentpgbastionInstanceSecurityGroupF92EE151": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "bastion-host-project-development-stack/bastion-host-project-development-pg-bastion/InstanceSecurityGroup",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "255.255.255.255/32",
+            "Description": "Disallow all traffic",
+            "FromPort": 252,
+            "IpProtocol": "icmp",
+            "ToPort": 86
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "bastion-host-project-development-pg-bastion"
+          }
+        ],
+        "VpcId": {
+          "Ref": "bastionhostprojectdevelopmentvpc289FDA40"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-pg-bastion/InstanceSecurityGroup/Resource"
+      }
+    },
+    "bastionhostprojectdevelopmentpgbastionInstanceRole38571E36": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ec2.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "bastion-host-project-development-pg-bastion"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-pg-bastion/InstanceRole/Resource"
+      }
+    },
+    "bastionhostprojectdevelopmentpgbastionInstanceProfile810C8AD6": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Roles": [
+          {
+            "Ref": "bastionhostprojectdevelopmentpgbastionInstanceRole38571E36"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-pg-bastion/InstanceProfile"
+      }
+    },
+    "bastionhostprojectdevelopmentpgbastion12200387": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "AvailabilityZone": "us-east-1a",
+        "IamInstanceProfile": {
+          "Ref": "bastionhostprojectdevelopmentpgbastionInstanceProfile810C8AD6"
+        },
+        "ImageId": {
+          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamznamihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+        },
+        "InstanceType": "t3.micro",
+        "KeyName": "bastion-host-project-keypair",
+        "SecurityGroupIds": [
+          {
+            "Fn::GetAtt": [
+              "bastionhostprojectdevelopmentpgbastionInstanceSecurityGroupF92EE151",
+              "GroupId"
+            ]
+          },
+          {
+            "Fn::GetAtt": [
+              "bastionhostprojectdevelopmentpgbastionsg4D8F1B76",
+              "GroupId"
+            ]
+          }
+        ],
+        "SubnetId": {
+          "Ref": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentpublicSubnet1Subnet13BA03C0"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "bastion-host-project-development-pg-bastion"
+          }
+        ],
+        "UserData": {
+          "Fn::Base64": "#!/bin/bash"
+        }
+      },
+      "DependsOn": [
+        "bastionhostprojectdevelopmentpgbastionInstanceRole38571E36"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/bastion-host-project-development-pg-bastion/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAAE31QwW7CMAz9Fu4hrNukXcdgQpxWFcTdDaYL0ATZDghV/felLaVok3by8/OT/fwSnSSJfhq9w4XHZnuYVMYT6molYA4qQ/aBDKrZzn0FOQVpUAoEJQqSmnnHQsG0dC+uVbOrQvOsq83JNKNNOlNpyI/WrELusJUPKPNBcA35EQd+4KbM3lgQ691drFKyZxAcdixd9BPxIrIXuN6O3rqpxG++S3SiVmgCWbkuyIdTe+5f4rMgZFbL+Ca4Loce14rREAqX4KBAipm1/W1Hg7qyBipQHjzcBb8ncSWXTfZkXfGQ8kPktaIt62oOAjkw3o11SdyfmH/8IQbfFuKRzHdx97Ufp+R39oh1XSvnt6j3PDknrzp50y+jPVs7puDElqizrv4A6ot31kECAAA="
+      },
+      "Metadata": {
+        "aws:cdk:path": "bastion-host-project-development-stack/CDKMetadata/Default"
+      }
+    }
+  },
+  "Outputs": {
+    "BastionHostProjectDevelopmentVPCEndpointsOutboundSGID": {
+      "Value": {
+        "Fn::GetAtt": [
+          "bastionhostprojectdevelopmentvpcendpointsoutboundsgE03F136B",
+          "GroupId"
+        ]
+      }
+    },
+    "BastionHostProjectDevelopmentVPCIsolatedSubnets": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            {
+              "Ref": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet1SubnetE16F1C77"
+            },
+            "; ",
+            {
+              "Ref": "bastionhostprojectdevelopmentvpcbastionhostprojectdevelopmentisolatedSubnet2Subnet562D9E45"
+            }
+          ]
+        ]
+      }
+    },
+    "BastionHostProjectDevelopmentDatabaseEndpoint": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            {
+              "Fn::GetAtt": [
+                "BastionHostProjectDevelopmentDatabase478EC4E9",
+                "Endpoint.Address"
+              ]
+            },
+            ":",
+            {
+              "Fn::GetAtt": [
+                "BastionHostProjectDevelopmentDatabase478EC4E9",
+                "Endpoint.Port"
+              ]
+            }
+          ]
+        ]
+      }
+    },
+    "BastionHostProjectDevelopmentDatabaseCredentialsARN": {
+      "Value": {
+        "Fn::GetAtt": [
+          "BastionHostProjectDevelopmentDBCredentialsArnDF5C9545",
+          "Value"
+        ]
+      }
+    },
+    "BastionHostProjectDevelopmentBastionInstanceConnectionInfo": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "ssh -i ~/.ssh/bastion-host-project-keypair.pem -NL 8886:",
+            {
+              "Fn::GetAtt": [
+                "BastionHostProjectDevelopmentDatabase478EC4E9",
+                "Endpoint.Address"
+              ]
+            },
+            ":5432 ec2-user@",
+            {
+              "Fn::GetAtt": [
+                "bastionhostprojectdevelopmentpgbastion12200387",
+                "PublicDnsName"
+              ]
+            },
+            " -v"
+          ]
+        ]
+      }
+    }
+  },
+  "Parameters": {
+    "SsmParameterValueawsserviceamiamazonlinuxlatestamznamihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter": {
+      "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
+      "Default": "/aws/service/ami-amazon-linux-latest/amzn-ami-hvm-x86_64-gp2"
+    }
+  }
+}
