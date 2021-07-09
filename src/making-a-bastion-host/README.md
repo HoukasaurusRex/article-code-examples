@@ -1,6 +1,6 @@
 # Making a Bastion Host CDK Example
 
-Read [Making a Bastion Host](https://jt.houk.space/articles/making-a-bastion-host/) for additional explanation of the project.
+Read [Making a Bastion Host](https://jt.houk.space/articles/making-a-bastion-host/) for the original in-depth explanation of the project.
 
 ## Getting Started
 
