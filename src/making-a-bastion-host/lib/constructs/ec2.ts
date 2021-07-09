@@ -43,7 +43,7 @@ export class BastionInstance {
       
     bastionInstance.addSecurityGroup(securityGroup)
 
-    logger.log('BastionInstanceConnectionInfo: ', `ssh -i ~/.ssh/${keyName}.pem -NL 8886:${endpointAddress || 'endpointAddress'}:${endpointPort} ec2-user@${bastionInstance.instancePublicDnsName} -v`)
+    logger.log('BastionInstancePublicDNS', `${bastionInstance.instancePublicDnsName}`)
 
     this.instance = bastionInstance
 
