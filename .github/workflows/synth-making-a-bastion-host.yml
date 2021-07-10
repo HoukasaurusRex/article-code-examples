@@ -10,20 +10,16 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Checkout bastion project
-        run: cd src/making-a-bastion-host
       - name: Setup node.js
         uses: actions/setup-node@v2
         with:
           node-version: '14'
+      - name: Install dependencies
+        working-directory: src/making-a-bastion-host
+        run: npm install
       - name: cdk synth
-        # uses: youyo/aws-cdk-github-actions@v2
-        # temporarily use fork until issue with file permissions resuolved
-        # https://github.com/youyo/aws-cdk-github-actions/issues/36
-        uses: UpperCampus/aws-cdk-github-actions@master
-        with:
-          cdk_subcommand: 'synth'
-          # cdk_args: '--require-approval never'
+        working-directory: ./src/making-a-bastion-host
+        run: npm run synth
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
