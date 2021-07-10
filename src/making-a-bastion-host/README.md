@@ -1,3 +1,5 @@
+[![Making a Bastion Host CDK Synth][making-a-bastion-host-workflow-shield]][making-a-bastion-host-workflow-url]
+
 # Making a Bastion Host CDK Example
 
 Read [Making a Bastion Host](https://jt.houk.space/articles/making-a-bastion-host/) for the original in-depth explanation of the project.
@@ -70,3 +72,6 @@ psql -h 127.0.0.1 -p 8886 -d development -U [username]
 * `npm run diff` - output AWS infrastructure changelog
 * `npm run deploy` - deploy stack
 * `npm run destroy` - destroy stack
+
+[making-a-bastion-host-workflow-shield]: https://github.com/HoukasaurusRex/article-code-examples/actions/workflows/synth-making-a-bastion-host.yml/badge.svg
+[making-a-bastion-host-workflow-url]: https://github.com/HoukasaurusRex/article-code-examples/actions/workflows/synth-making-a-bastion-host.yml
