@@ -8,14 +8,13 @@ interface BastionStackProps {
   vpcEndpointsSecurityGroup: ec2.SecurityGroup
   // Defaults to 5432
   endpointPort?: number
-  endpointAddress?: string
   keyName?: string
 }
 export class BastionInstance {
   public readonly instance: ec2.Instance
 
   constructor(scope: cdk.Construct, props: BastionStackProps) {
-    const { vpc, prefix, vpcEndpointsSecurityGroup, endpointAddress, keyName } = props
+    const { vpc, prefix, vpcEndpointsSecurityGroup, keyName } = props
     const endpointPort = ec2.Port.tcp(props.endpointPort || 5432)
     const logger = new CfnLogger(scope)
 

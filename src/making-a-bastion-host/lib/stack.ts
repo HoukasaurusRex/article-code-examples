@@ -28,7 +28,6 @@ export class BastionProjectStack extends cdk.Stack {
       vpc,
       vpcEndpointsSecurityGroup,
       endpointPort: parseInt(pgConnInfo.port, 10),
-      endpointAddress: pgConnInfo.endpointAddress,
       // Cannot create keyPair with current version of CDK (1.111.0)
       // Currently requires manual creation then updating name in config.ts
       // See CDK issue for updates: https://github.com/aws/aws-cdk/issues/5252
