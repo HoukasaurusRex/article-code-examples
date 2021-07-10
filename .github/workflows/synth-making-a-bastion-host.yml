@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: Checkout bastion project
         run: cd src/making-a-bastion-host
       - name: Setup node.js
         uses: actions/setup-node@v2
